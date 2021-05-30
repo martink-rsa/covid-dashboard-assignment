@@ -1,5 +1,7 @@
 # Covid Dashboard assignment:
 
+![image](https://user-images.githubusercontent.com/52622303/120093224-15433000-c119-11eb-89ce-21d5929c3f32.png)
+
 I had the task of building out a Covid dashboard using an API endpoint provided to me.
 
 The project requirements were:
