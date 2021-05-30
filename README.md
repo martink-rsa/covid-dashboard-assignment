@@ -14,7 +14,7 @@ The project requirements were:
 
 I had the weekend to finish the assignment but not all of the weekend available to me. The project took approximately 6-8 hours to complete, however about 2-3 hours were used in building bar graph components that never made it into the final build.
 
-## Installating and Get Started Guide
+## Installing and Get Started Guide
 
 ### Clone the repo
 
@@ -48,11 +48,11 @@ Not in build:
 The data had multiple entries per country that had to be consolidated. In addition to this:
 * some countries weren't included in the data; 
 * some country's entries had incomplete data;
-* some country's entires had errors in  the data. 
+* some country's entries had errors in  the data. 
 
 I opted to shape my own object when the API call was made so that dealing with the data was more manageable. I chose to use a hash table for my data instead of an array so that I could access the countries using a key. This had the advantage of O(1) time complexity over the original O(n).
 
-The data from the endpoint didn't give much leeway in terms of representing the data. It only contained the figures "Confirmed", "Recovered", "Active" and "Deaths", all of which are being represented in the App as cards. There was no period data so I couldn't build out graphs e.g line graph showing changes over a period of time.
+The data from the endpoint didn't give much leeway in terms of representing the data. It only contained the figures "Confirmed", "Recovered", "Active" and "Deaths", all of which are being represented in the App as cards. There was no period data so I couldn't build out graphs e.g. line graph showing changes over a period of time.
 
 2. Bar charts
 
