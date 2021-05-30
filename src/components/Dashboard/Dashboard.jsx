@@ -9,7 +9,7 @@ import {
   selectIsLoaded,
 } from '../../store/covid';
 
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 import MapChart from '../MapChart/MapChart';
 import CountryHeading from '../CountryHeading/CountryHeading';
 import StatBox from '../StatBox/StatBox';
@@ -49,7 +49,8 @@ function Dashboard() {
       <S.PageWrapper>
         {isLoaded && (
           <>
-            <Header />
+            {/* Enable header when logo and login section is ready */}
+            {/* <Header /> */}
             <SearchBar />
             <CountryHeading />
             <MapChart data={covidData} secondary />

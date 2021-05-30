@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { sortCovidData, getCountries, fetchData } from '../utils/utils';
-import { dummyData } from '../components/Dashboard/data';
+import { dummyData } from '../data/data';
 
 const initialState = {
   currentCountry: '',
@@ -12,19 +12,21 @@ const initialState = {
 };
 
 // Debug switches out API data with a local file
-const debug = false;
+const DEBUG = true;
 
 // Value returned becomes the `fulfilled` action payload
 export const getData = createAsyncThunk('covid/getData', async () => {
+  // Can shorten debug to single line, but then can't easily add more code
+  // const response = debug ? dummyData : await fetchData('https://covid19.mathdro.id/api/recovered');
   let response;
-  if (debug) {
+  if (DEBUG) {
     response = dummyData;
   } else {
     response = await fetchData('https://covid19.mathdro.id/api/recovered');
   }
-  const sortedData = sortCovidData(response);
-  const countries = getCountries(sortedData);
-  return { data: sortedData, countries };
+  const data = sortCovidData(response);
+  const countries = getCountries(data);
+  return { data, countries };
 });
 
 export const covidSlice = createSlice({
